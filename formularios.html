@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <title>
+            Ejercicio DOM, eventos y funciones
+        </title>
+
+        <!-- 
+        Archivo JavaScript externo que contiene la lógica
+        del ejercicio (DOM, eventos y funciones)
+        -->
+        <script type="text/javascript" src="JS/32_ejercicio_dom.js"></script>
+
+        <style>
+            /*
+            ESTILOS GENERALES
+            */
+
+            /* 
+            Clase .box
+            Se utiliza para crear contenedores con tamaño fijo
+            */
+            .box{
+                width: 250px;
+                height: 250px;
+                float: left;   /* Permite colocar los divs uno al lado del otro */
+                margin: 20px;  /* Espacio exterior */
+            }
+
+            /*
+            Clase .dashed
+            Agrega un borde punteado y padding interno
+            */
+            .dashed{
+                border: 3px dashed black;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!--
+        EJERCICIO DOM, EVENTOS Y FUNCIONES
+
+        Objetivos:
+        1. Crear un formulario con Nombre, Apellidos y Edad
+        2. Capturar el evento submit
+        3. Mostrar los datos en pantalla
+        4. Manipular el DOM para actualizar información
+        -->
+
+        <!-- Título principal del ejercicio -->
+        <h1>Ejercicio Dom, eventos y funciones - JS Practicas Emiliano Reséndiz</h1>
+        
+
+        <!--
+             CONTENEDOR DEL FORMULARIO
+         -->
+        <div class="box">
+
+            <!-- 
+            Formulario:
+            - action="#" evita redirección
+            - method="POST" simula envío
+            - id="formulario" permite capturarlo con JS
+            - onsubmit="return false;" evita recargar la página
+            -->
+            <form action="#" method="POST" id="formulario" onsubmit="return false;">
+
+                <!-- Campo Nombre -->
+                <label for="nombre">Nombre</label> <br/>
+                <input type="text" name="nombre" id="nombre"/><br/>
+
+                <!-- Campo Apellidos -->
+                <label for="apellidos">Apellidos</label> <br/>
+                <input type="text" name="apellidos" id="apellidos"/> <br/>
+
+                <!-- Campo Edad -->
+                <label for="edad">Edad</label> <br/>
+                <input type="number" name="edad" id="edad"/> <br/>
+
+                <!-- Botón para enviar formulario -->
+                <input type="submit" value="Enviar" id="submit"/> <br/>
+
+            </form>
+        </div>
+
+        <!--
+        CONTENEDOR PARA MOSTRAR INFORMACIÓN
+        -->
+        <div class="box dashed">
+
+            <!-- Título de sección -->
+            <h1>Información del usuario</h1>
+            <hr>
+
+            <!-- 
+            Cada <span> será actualizado dinámicamente
+            desde JavaScript usando el DOM
+            -->
+
+            <!-- Mostrar Nombre -->
+            <p id="pNombre">
+                Nombre: <span></span>
+            </p>
+
+            <!-- Mostrar Apellidos -->
+            <p id="pApellidos">
+                Apellido: <span></span>
+            </p>
+
+            <!-- Mostrar Edad -->
+            <p id="pEdad">
+                Edad: <span></span>
+            </p>
+        </div>
+    </body>
+</html>
