@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8"/>
+
+        <!-- 
+        Título que aparecerá en la pestaña del navegador
+        -->
+        <title>Practicas en JS Emiliano Reséndiz</title>
+
+    </head>
+    
+    <body>
+        <!-- 
+        SECCIÓN PARA AGREGAR PELÍCULAS
+        -->
+
+        <!-- Título de la sección -->
+        <h1>Añade tu pelicula</h1>
+
+        <!-- 
+        Formulario para agregar una nueva película.
+        JavaScript capturará el evento submit y guardará
+        el valor del input en LocalStorage.
+        -->
+        <form action="" id="formPelicula">
+
+            <!-- 
+            Campo de texto donde el usuario escribirá
+            el nombre de la película
+            -->
+            <input type="text" id="addPelicula"/>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submite">Guardar</button>
+
+        </form>
+
+        <!-- 
+        LISTA DE PELÍCULAS GUARDADAS
+        -->
+
+        <!-- 
+        Subtítulo que describe el contenido del contenedor
+        -->
+        <h2>
+            Peliculas
+        </h2>
+
+        <!-- 
+        CONTENEDOR DONDE SE MOSTRARÁN LAS PELÍCULAS
+
+        Este div funcionará como contenedor para mostrar
+        dinámicamente las películas desde JavaScript.
+
+        El script insertará elementos <li> dentro de la lista
+        utilizando manipulación del DOM.
+        -->
+        <div id="peliculas">
+            <!-- 
+            Lista donde se insertarán las películas
+            guardadas en LocalStorage
+            -->
+            <ul id="peliculasList">
+            </ul>
+        </div>
+
+        <!-- 
+        SECCIÓN PARA BORRAR PELÍCULAS
+        -->
+
+        <!-- Título de la sección -->
+        <h1>Borra tu pelicula</h1>
+
+        <!-- 
+        Formulario para eliminar una película del LocalStorage.
+        El usuario escribirá el nombre de la película a eliminar.
+        -->
+        <form action="" id="formBorrarPelicula">
+
+            <!-- Campo donde el usuario indicará qué película borrar -->
+            <input type="text" id="deletePelicula"/>
+
+            <!-- Botón para ejecutar la eliminación -->
+            <button type="submite">Guardar</button>
+
+        </form>
+
+
+        <!--
+        CONTENEDOR PARA MOSTRAR DATOS ADICIONALES
+
+        Este contenedor se utilizaba en ejercicios anteriores
+        para mostrar información adicional desde JavaScript.
+
+        Actualmente está comentado porque no se usa en este
+        ejercicio de LocalStorage.
+    
+        //Quitar de documentación en caso de usar el archivo 33_json o 34_LocalStorage
+        <div id="datos">
+        </div>
+
+        -->
+
+        <!--
+        ARCHIVOS JAVASCRIPT EXTERNOS
+
+        Script anterior del ejercicio JSON.
+        Actualmente está comentado porque el ejercicio
+        ahora trabaja con LocalStorage.
+        -->
+
+        <!--<script type="text/javascript" src="JS/33_json.js"></script>-->
+
+        <!-- 
+        Script del ejercicio anterior de LocalStorage.
+        También se encuentra comentado porque ahora
+        se utiliza el ejercicio 35.
+        -->
+
+        <!--<script type="text/javascript" src="JS/34_LocalStorage.js"></script>-->
+
+        <!-- 
+        Script activo del ejercicio actual.
+
+        Este archivo contiene la lógica para:
+        - Guardar películas en LocalStorage
+        - Mostrar películas almacenadas
+        - Eliminar películas del almacenamiento
+        - Manipular el DOM dinámicamente
+        -->
+
+        <script type="text/javascript" src="JS/35_ejercicio_localStorage.js"></script>
+    </body>
+</html>
